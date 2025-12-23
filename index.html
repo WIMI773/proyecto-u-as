@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./public/assets/logo-spa.png" type="image/png">
+    <title>Bella Nails Spa - Belleza y Estilo en Cada Detalle</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="/images/kiaralogo.png" alt="Bella Nails Spa Logo">
+                    <span>Kiara Nails Spa</span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li><a href="#reservar" class="nav-link">Reservar Cita</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="#" class="btn-whatsapp-nav" id="whatsappNavBtn"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Belleza y Estilo en Cada Detalle</h1>
+            <p class="hero-subtitle">Descubre la experiencia de un spa de uñas profesional</p>
+            <a href="#reservar" class="btn-primary">Reservar Cita</a>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section class="servicios" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Tratamientos profesionales para tus manos y pies</p>
+            
+            <div class="servicios-grid">
+                <!-- Servicio 1: Manicure -->
+                <div class="servicio-card">
+                    <div class="servicio-image">
+                        <img src="/images/serviciomanicure.jpg" alt="Manicure">
+                    </div>
+                    <div class="servicio-content">
+                        <h3>Manicure</h3>
+                        <p>Tratamiento completo para tus manos: limado, cutícula, hidratación y esmaltado perfecto.</p>
+                        <div class="servicio-details">
+                            <span class="precio"><i class="fas fa-tag"></i> $12.000</span>
+                            <span class="duracion"><i class="far fa-clock"></i> 45 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Pedicure -->
+                <div class="servicio-card">
+                    <div class="servicio-image">
+                        <img src="/images/servicepedicure.jpg" alt="Pedicure">
+                    </div>
+                    <div class="servicio-content">
+                        <h3>Pedicure</h3>
+                        <p>Relájate con nuestro pedicure spa: exfoliación, masaje, hidratación y esmaltado de lujo.</p>
+                        <div class="servicio-details">
+                            <span class="precio"><i class="fas fa-tag"></i> $12.000</span>
+                            <span class="duracion"><i class="far fa-clock"></i> 60 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 6: Combo Especial -->
+                <div class="servicio-card servicio-especial">
+                    <div class="servicio-image">
+                        <img src="/images/combo2.avif" alt="Combo Especial">
+                        <div class="badge-especial">Especial</div>
+                    </div>
+                    <div class="servicio-content">
+                        <h3>Combo Manicure + Pedicure</h3>
+                        <p>Tratamiento completo para manos y pies. ¡Ahorra con nuestro paquete especial!</p>
+                        <div class="servicio-details">
+                            <span class="precio"><i class="fas fa-tag"></i> $22.000 <small class="precio-anterior">$24.000</small></span>
+                            <span class="duracion"><i class="far fa-clock"></i> 1:30 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Reserva -->
+    <section class="reserva" id="reservar">
+        <div class="container">
+            <h2 class="section-title">Reserva tu Cita</h2>
+            <p class="section-subtitle">Completa el formulario y te contactaremos por WhatsApp</p>
+            
+            <div class="reserva-wrapper">
+                <form class="reserva-form" id="reservaForm">
+                    <div class="form-group">
+                        <label for="nombre"><i class="fas fa-user"></i> Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ej: María García">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono"><i class="fas fa-phone"></i> Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required placeholder="Ej: +1234567890">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servicio"><i class="fas fa-spa"></i> Servicio</label>
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="Manicure - $12.000">Manicure - $12.000</option>
+                            <option value="Pedicure - $12.000">Pedicure - $12.000</option>
+                            <option value="Combo Manicure + Pedicure - $22.000">Combo Manicure + Pedicure - $22.000</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fecha"><i class="far fa-calendar"></i> Fecha</label>
+                            <input type="date" id="fecha" name="fecha" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hora"><i class="far fa-clock"></i> Hora</label>
+                            <input type="time" id="hora" name="hora" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentarios"><i class="fas fa-comment"></i> Comentarios (opcional)</label>
+                        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Alguna preferencia o comentario especial..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fab fa-whatsapp"></i> Enviar Reserva por WhatsApp
+                    </button>
+                </form>
+
+                <div class="reserva-info">
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horarios</h3>
+                        <p>Lunes a Sábado<br>9:00 AM - 7:00 PM</p>
+                        <p>Domingo<br>10:00 AM - 5:00 PM</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Ubicación</h3>
+                        <p>Cra 10a #16-18<br>Ocaña Norte de Santander<br>Barrio Gustavo Alayon</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>Importante</h3>
+                        <p>Por favor llega 5 minutos antes de tu cita.<br>Cancelaciones con 24h de anticipación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section class="galeria" id="galeria">
+        <div class="container">
+            <h2 class="section-title">Galería de Trabajos</h2>
+            <p class="section-subtitle">Algunos de nuestros diseños más recientes</p>
+            
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="/images-galeria/galeria8.jpg" alt="Trabajo 1">
+                    
+                </div>
+
+                <div class="galeria-item">
+                    <img src="/images-galeria/galeria5.jpg" alt="Trabajo 2">
+                    
+                </div>
+
+                <div class="galeria-item">
+                    <img src="/images-galeria/galeria7.jpg" alt="Trabajo 3">
+                    
+                </div>
+
+                <div class="galeria-item">
+                    <img src="/images-galeria/galeria3.jpg" alt="Trabajo 4">
+                    
+                </div>
+
+                <div class="galeria-item">
+                    <img src="/images-galeria/galeria10.jpg" alt="Trabajo 5">
+                    
+                </div>
+
+                <div class="galeria-item">
+                    <img src="/images-galeria/galeria11.jpg" alt="Trabajo 6">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-subtitle">Estamos aquí para atenderte</p>
+            
+            <div class="contacto-grid">
+                <div class="contacto-card">
+                    <div class="contacto-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Dirección</h3>
+                    <p>Cra 10a #16-18<br>Ocaña Norte de Santander<br>Barrio Gustavo Alayon</p>
+                </div>
+
+                <div class="contacto-card">
+                    <div class="contacto-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Teléfono</h3>
+                    <p><a href="tel:+1234567890">+57 3172121745</a></p>
+                </div>
+
+                <div class="contacto-card">
+                    <div class="contacto-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p><a href="#" id="whatsappContactBtn">+57 3172121745</a></p>
+                </div>
+
+                <div class="contacto-card">
+                    <div class="contacto-icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <h3>Horarios</h3>
+                    <p>Lun - Sáb: 9:00 AM - 7:00 PM<br>Domingo: 10:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kiara Nails Spa. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="#" class="whatsapp-float" id="whatsappFloat" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
